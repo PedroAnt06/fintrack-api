@@ -15,7 +15,6 @@ public class CustomUserDetailsService {
         this.userRepository = userRepository;
     }
 
-    // Método da sua parte: buscar usuário por email
     public Optional<User> loadUserByEmail(String email) {
         return userRepository.findByEmail(email);
     }
