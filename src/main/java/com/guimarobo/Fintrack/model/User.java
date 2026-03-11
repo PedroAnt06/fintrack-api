@@ -1,5 +1,6 @@
 package com.guimarobo.Fintrack.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -26,6 +27,7 @@ public class User implements UserDetails {
     private String email;
 
     @NotBlank(message = "A senha é obrigatória.")
+    @JsonIgnore
     private String password;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
@@ -41,6 +43,7 @@ public class User implements UserDetails {
         this.password = password;
     }
 
+    @JsonIgnore
     public String getPassword() {
         return password;
     }
@@ -117,7 +120,6 @@ public class User implements UserDetails {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
                 '}';
     }
 }
