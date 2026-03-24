@@ -26,7 +26,7 @@ REST API para controle financeiro pessoal. Permite gerenciar contas e transaçõ
 
 **1. Clone o repositório**
 ```bash
-git clone https://github.com/guimarobo/fintrack-api.git
+git clone https://github.com/unilopers/fintrack-api.git
 cd fintrack-api
 ```
 
